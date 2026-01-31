@@ -1,20 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Cámara Viajera</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #eee;
-      text-align: center;
-      padding: 40px;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cámara Viajera</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            background-color: #f7f7f7;
+            color: #222;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        h1 {
+            font-weight: 300;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            max-width: 600px;
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            border: 1px solid #222;
+            text-decoration: none;
+            color: #222;
+            font-size: 1rem;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #222;
+            color: #fff;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+    </style>
 </head>
+
 <body>
-  <h1>Bienvenido a Cámara Viajera</h1>
-  <p>Muy pronto, un espacio visual lleno de luz, viaje y emoción.</p>
+
+    <h1>Cámara Viajera</h1>
+
+    <p>
+        Un espacio donde la fotografía, el viaje y la emoción se encuentran.  
+        Historias visuales, lugares que inspiran y momentos que merecen ser contados.
+    </p>
+
+    <a class="btn" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
+        Visitar el canal
+    </a>
+
+    <footer>
+        © Cámara Viajera · Creado con cariño desde Madrid
+    </footer>
+
 </body>
 </html>
