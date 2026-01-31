@@ -21,8 +21,8 @@
         }
 
         h1 {
-            font-weight: 600;      /* Más gordo */
-            font-size: 3.2rem;     /* Un poco más grande */
+            font-weight: 600;
+            font-size: 3.2rem;
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
         }
@@ -32,17 +32,17 @@
             font-size: 1.2rem;
             line-height: 1.7;
             margin-bottom: 2.2rem;
-            color: #ccc;           /* Más claro sobre negro */
+            color: #ccc;
         }
 
         .btn {
             display: inline-flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             padding: 12px 28px;
-            border: 1px solid #fff;   /* Borde blanco */
+            border: 1px solid #fff;
             text-decoration: none;
-            color: #fff;              /* Texto blanco */
+            color: #fff;
             font-size: 1rem;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
@@ -50,7 +50,29 @@
 
         .btn:hover {
             background-color: #fff;
-            color: #000;              /* Inversión elegante */
+            color: #000;
+        }
+
+        /* Icono estilo YouTube */
+        .yt-icon {
+            width: 24px;
+            height: 17px;
+            background-color: #ff0000;
+            border-radius: 4px;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .yt-icon::before {
+            content: "";
+            width: 0;
+            height: 0;
+            border-left: 8px solid #fff;
+            border-top: 5px solid transparent;
+            border-bottom: 5px solid transparent;
+            margin-left: 2px;
         }
 
         footer {
@@ -73,7 +95,7 @@
 
     <a class="btn" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
         <span>Visitar el canal</span>
-        <span style="font-size: 1.3rem;">▶️</span>
+        <span class="yt-icon"></span>
     </a>
 
     <footer>
