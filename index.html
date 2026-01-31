@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: linear-gradient(to bottom, #000000 0%, #2a2a2a 100%);
+            background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
             color: #eee;
             display: flex;
             flex-direction: column;
@@ -18,25 +18,48 @@
             align-items: center;
             min-height: 100vh;
             text-align: center;
+            overflow: hidden;
         }
+
+        /* Animación fade-in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade {
+            opacity: 0;
+            animation: fadeIn 1.2s ease-out forwards;
+        }
+
+        .fade.delay1 { animation-delay: 0.2s; }
+        .fade.delay2 { animation-delay: 0.4s; }
+        .fade.delay3 { animation-delay: 0.6s; }
 
         /* Contenedor del logo + título */
         .title-container {
             display: flex;
             align-items: center;
-            gap: 18px;
+            gap: 28px;
             margin-bottom: 0.5rem;
         }
 
-        /* Logo minimalista */
+        /* Logo más vistoso */
         .logo {
-            width: 48px;
-            height: 32px;
+            width: 70px;
+            height: 48px;
+            filter: drop-shadow(0 0 4px rgba(255,255,255,0.25));
         }
 
         h1 {
             font-weight: 600;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             letter-spacing: 1px;
             margin: 0;
         }
@@ -101,31 +124,27 @@
 <body>
 
     <!-- Logo + Título -->
-    <div class="title-container">
-        <!-- SVG del logo minimalista -->
-        <svg class="logo" viewBox="0 0 100 60" fill="none" stroke="#fff" stroke-width="4">
-            <!-- Cuerpo de la cámara -->
-            <rect x="5" y="15" width="90" height="40" rx="6" />
-            <!-- Objetivo -->
-            <circle cx="50" cy="35" r="12" />
-            <!-- Visor superior -->
-            <rect x="70" y="5" width="20" height="10" rx="2" />
+    <div class="title-container fade delay1">
+        <svg class="logo" viewBox="0 0 100 60" fill="none" stroke="#fff" stroke-width="5">
+            <rect x="5" y="15" width="90" height="40" rx="8" />
+            <circle cx="50" cy="35" r="14" />
+            <rect x="70" y="5" width="22" height="10" rx="2" />
         </svg>
 
         <h1>Cámara Viajera</h1>
     </div>
 
-    <p>
+    <p class="fade delay2">
         Un espacio donde la fotografía, el viaje y la emoción se encuentran.  
         Historias visuales, lugares que inspiran y momentos que merecen ser contados.
     </p>
 
-    <a class="btn" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
+    <a class="btn fade delay3" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
         <span>Visitar el canal</span>
         <span class="yt-icon"></span>
     </a>
 
-    <footer>
+    <footer class="fade delay3">
         © Cámara Viajera · Creado con cariño desde Madrid
     </footer>
 
