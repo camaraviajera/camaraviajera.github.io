@@ -21,41 +21,43 @@
         }
 
         h1 {
-            font-weight: 300;
-            font-size: 3rem;
+            font-weight: 600;      /* Más gordo */
+            font-size: 3.2rem;     /* Un poco más grande */
             margin-bottom: 0.5rem;
             letter-spacing: 1px;
         }
 
         p {
             max-width: 600px;
-            font-size: 1.1rem;
-            line-height: 1.6;
-            margin-bottom: 2rem;
-            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.7;
+            margin-bottom: 2.2rem;
+            color: #ccc;           /* Más claro sobre negro */
         }
 
         .btn {
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
             padding: 12px 28px;
-            border: 1px solid #222;
+            border: 1px solid #fff;   /* Borde blanco */
             text-decoration: none;
-            color: #222;
+            color: #fff;              /* Texto blanco */
             font-size: 1rem;
             letter-spacing: 0.5px;
             transition: all 0.3s ease;
         }
 
         .btn:hover {
-            background-color: #222;
-            color: #fff;
+            background-color: #fff;
+            color: #000;              /* Inversión elegante */
         }
 
         footer {
             position: absolute;
             bottom: 20px;
             font-size: 0.85rem;
-            color: #888;
+            color: #777;
         }
     </style>
 </head>
@@ -70,7 +72,8 @@
     </p>
 
     <a class="btn" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
-        Visitar el canal
+        <span>Visitar el canal</span>
+        <span style="font-size: 1.3rem;">▶️</span>
     </a>
 
     <footer>
