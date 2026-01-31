@@ -10,7 +10,7 @@
             margin: 0;
             padding: 0;
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background-color: #000;
+            background: linear-gradient(to bottom, #000 0%, #0d0d0d 100%);
             color: #eee;
             display: flex;
             flex-direction: column;
@@ -20,11 +20,25 @@
             text-align: center;
         }
 
+        /* Contenedor del logo + título */
+        .title-container {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Logo minimalista */
+        .logo {
+            width: 48px;
+            height: 32px;
+        }
+
         h1 {
             font-weight: 600;
             font-size: 3.2rem;
-            margin-bottom: 0.5rem;
             letter-spacing: 1px;
+            margin: 0;
         }
 
         p {
@@ -86,7 +100,20 @@
 
 <body>
 
-    <h1>Cámara Viajera</h1>
+    <!-- Logo + Título -->
+    <div class="title-container">
+        <!-- SVG del logo minimalista -->
+        <svg class="logo" viewBox="0 0 100 60" fill="none" stroke="#fff" stroke-width="4">
+            <!-- Cuerpo de la cámara -->
+            <rect x="5" y="15" width="90" height="40" rx="6" />
+            <!-- Objetivo -->
+            <circle cx="50" cy="35" r="12" />
+            <!-- Visor superior -->
+            <rect x="70" y="5" width="20" height="10" rx="2" />
+        </svg>
+
+        <h1>Cámara Viajera</h1>
+    </div>
 
     <p>
         Un espacio donde la fotografía, el viaje y la emoción se encuentran.  
