@@ -1,128 +1,132 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cámara Viajera</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cámara Viajera</title>
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
-            color: #eee;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            text-align: center;
-            overflow: hidden;
-        }
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      background: linear-gradient(to bottom, #000000 0%, #1a1a1a 100%);
+      color: #eee;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      overflow-x: hidden;
+    }
 
-        /* Animación fade-in */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+    /* Fade-in suave */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
 
-        .fade {
-            opacity: 0;
-            animation: fadeIn 1.2s ease-out forwards;
-        }
+    header {
+      margin-top: 60px;
+      animation: fadeIn 1.5s ease forwards;
+    }
 
-        .fade.delay1 { animation-delay: 0.2s; }
-        .fade.delay2 { animation-delay: 0.4s; }
-        .fade.delay3 { animation-delay: 0.6s; }
+    h1 {
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 10px;
+      font-weight: 300;
+    }
 
-        h1 {
-            font-weight: 600;
-            font-size: 3.6rem;
-            letter-spacing: 1px;
-            margin: 0 0 0.5rem 0;
-        }
+    p {
+      font-size: 1.2rem;
+      opacity: 0.8;
+      margin-bottom: 40px;
+    }
 
-        p {
-            max-width: 600px;
-            font-size: 1.2rem;
-            line-height: 1.7;
-            margin-bottom: 2.2rem;
-            color: #ccc;
-        }
+    /* Botón */
+    .btn {
+      display: inline-block;
+      padding: 14px 32px;
+      font-size: 1.1rem;
+      color: #000;
+      background: #eee;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: bold;
+    }
 
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 12px 28px;
-            border: 1px solid #fff;
-            text-decoration: none;
-            color: #fff;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            transition: all 0.3s ease;
-        }
+    .btn:hover {
+      background: #fff;
+      transform: scale(1.05);
+    }
 
-        .btn:hover {
-            background-color: #fff;
-            color: #000;
-        }
+    /* Banda de imágenes */
+    .image-banner {
+      width: 100%;
+      overflow: hidden;
+      background: #000;
+      padding: 20px 0;
+      margin-top: 40px;
+    }
 
-        /* Icono estilo YouTube */
-        .yt-icon {
-            width: 24px;
-            height: 17px;
-            background-color: #ff0000;
-            border-radius: 4px;
-            display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            position: relative;
-        }
+    .image-track {
+      display: flex;
+      gap: 20px;
+      animation: scroll 40s linear infinite;
+    }
 
-        .yt-icon::before {
-            content: "";
-            width: 0;
-            height: 0;
-            border-left: 8px solid #fff;
-            border-top: 5px solid transparent;
-            border-bottom: 5px solid transparent;
-            margin-left: 2px;
-        }
+    .image-track img {
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      opacity: 0.9;
+    }
 
-        footer {
-            position: absolute;
-            bottom: 20px;
-            font-size: 0.85rem;
-            color: #777;
-        }
-    </style>
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      opacity: 0.5;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
 
 <body>
 
-    <h1 class="fade delay1">Cámara Viajera</h1>
+  <header>
+    <h1>Cámara Viajera</h1>
+    <p>Fotografía, viaje y mirada cinematográfica</p>
+    <a class="btn" href="https://www.youtube.com/@camaraviajera">Entrar</a>
+  </header>
 
-    <p class="fade delay2">
-        Un espacio donde la fotografía, el viaje y la emoción se encuentran.  
-        Historias visuales, lugares que inspiran y momentos que merecen ser contados.
-    </p>
+  <!-- Banda de imágenes -->
+  <div class="image-banner">
+    <div class="image-track">
+      <img src="img/foto1.jpg" alt="">
+      <img src="img/foto2.jpg" alt="">
+      <img src="img/foto3.jpg" alt="">
+      <img src="img/foto4.jpg" alt="">
 
-    <a class="btn fade delay3" href="https://www.youtube.com/channel/UC4YYaKpYT-nMnXZOCIKCnQg" target="_blank">
-        <span>Visitar el canal</span>
-        <span class="yt-icon"></span>
-    </a>
+      <!-- Repetimos para el loop -->
+      <img src="img/foto1.jpg" alt="">
+      <img src="img/foto2.jpg" alt="">
+      <img src="img/foto3.jpg" alt="">
+      <img src="img/foto4.jpg" alt="">
+    </div>
+  </div>
 
-    <footer class="fade delay3">
-        © Cámara Viajera · Creado con cariño desde Madrid
-    </footer>
+  <footer>
+    © 2024 Cámara Viajera — Todos los derechos reservados
+  </footer>
 
 </body>
 </html>
+
