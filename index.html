@@ -73,35 +73,41 @@
             line-height: 1.7;
         }
 
-        /* --- BOTÓN YOUTUBE COMPLETO --- */
+        /* --- BOTÓN YOUTUBE PEQUEÑO Y FIJO --- */
         .btn-youtube {
-            margin-top: 40px;
-            padding: 14px 32px;
-            font-size: 1.1rem;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+
+            padding: 10px 20px;
+            font-size: 0.9rem;
             font-weight: 600;
             color: #fff;
             background-color: #ff0000;
             border: none;
-            border-radius: 8px;
+            border-radius: 6px;
             cursor: pointer;
             transition: 0.3s ease;
             text-decoration: none;
+
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            gap: 8px;
+
+            box-shadow: 0 0 12px rgba(255,0,0,0.4);
         }
 
         .btn-youtube:hover {
             background-color: #cc0000;
-            transform: scale(1.03);
+            transform: scale(1.05);
         }
 
         .play-icon {
             width: 0;
             height: 0;
-            border-left: 16px solid white;
-            border-top: 10px solid transparent;
-            border-bottom: 10px solid transparent;
+            border-left: 12px solid white;
+            border-top: 7px solid transparent;
+            border-bottom: 7px solid transparent;
         }
 
         /* --- FOOTER --- */
@@ -124,12 +130,13 @@
             Un espacio donde la imagen se convierte en viaje, memoria y emoción.  
             Historias capturadas a través de una lente que nunca deja de moverse.
         </p>
-
-        <a href="https://www.youtube.com/@camaraviajera-MGM/videos" class="btn-youtube">
-            <div class="play-icon"></div>
-            Entrar en mi canal de YouTube
-        </a>
     </div>
+
+    <!-- BOTÓN YOUTUBE FIJO -->
+    <a href="https://www.youtube.com/@camaraviajera-MGM/videos" class="btn-youtube">
+        <div class="play-icon"></div>
+        YouTube
+    </a>
 
     <footer>
         © 2026 Cámara Viajera — Todos los derechos reservados
