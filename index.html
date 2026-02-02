@@ -6,38 +6,44 @@
     <title>Cámara Viajera</title>
 
     <style>
+        /* --- ESTILOS GENERALES --- */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000; /* Fondo negro */
-            color: #fff; /* Texto blanco */
+            background-color: #000;
+            color: #fff;
             font-family: "Helvetica Neue", Arial, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
+            animation: fadeIn 1.8s ease;
+            background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 3px 3px; /* Grano cinematográfico sutil */
         }
 
-        /* TÍTULO METÁLICO CON RESPLANDOR Y RELIEVE */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* --- TÍTULO PRINCIPAL --- */
         h1 {
             font-size: 5rem;
             font-weight: 900;
             text-align: center;
             margin-top: 120px;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
 
-            /* Dorado metálico */
             background: linear-gradient(135deg, #8a6f1a, #d4af37, #fff8d0, #d4af37, #8a6f1a);
             background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             animation: shine 6s ease-in-out infinite;
 
-            /* Resplandor */
-            text-shadow: 
+            text-shadow:
                 0 0 12px rgba(255, 215, 0, 0.4),
                 0 0 22px rgba(255, 215, 0, 0.25);
 
-            /* Relieve */
             filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
             letter-spacing: 4px;
         }
@@ -48,7 +54,17 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* CONTENEDOR PRINCIPAL */
+        /* --- SUBTÍTULO POÉTICO --- */
+        h2 {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-top: 0;
+            margin-bottom: 40px;
+            opacity: 0.85;
+            letter-spacing: 1px;
+        }
+
+        /* --- CONTENIDO --- */
         .contenido {
             max-width: 900px;
             text-align: center;
@@ -57,14 +73,14 @@
             line-height: 1.7;
         }
 
-        /* BOTÓN ESTILO YOUTUBE COMPLETO */
+        /* --- BOTÓN YOUTUBE COMPLETO --- */
         .btn-youtube {
             margin-top: 40px;
             padding: 14px 32px;
             font-size: 1.1rem;
             font-weight: 600;
             color: #fff;
-            background-color: #ff0000; /* Rojo YouTube */
+            background-color: #ff0000;
             border: none;
             border-radius: 8px;
             cursor: pointer;
@@ -77,9 +93,9 @@
 
         .btn-youtube:hover {
             background-color: #cc0000;
+            transform: scale(1.03);
         }
 
-        /* ICONO PLAY */
         .play-icon {
             width: 0;
             height: 0;
@@ -88,7 +104,7 @@
             border-bottom: 10px solid transparent;
         }
 
-        /* FOOTER */
+        /* --- FOOTER --- */
         footer {
             margin-top: 80px;
             padding: 20px;
@@ -101,6 +117,7 @@
 <body>
 
     <h1>Cámara Viajera</h1>
+    <h2>Luz, viaje y memoria</h2>
 
     <div class="contenido">
         <p>
