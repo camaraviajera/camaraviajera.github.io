@@ -71,3 +71,31 @@
 
 </body>
 </html>
+.banner-slider {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 40px 0;
+}
+
+.banner-track {
+    display: flex;
+    gap: 20px;
+    animation: scrollBanner 30s linear infinite;
+}
+
+.banner-track img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+@keyframes scrollBanner {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
