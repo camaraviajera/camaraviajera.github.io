@@ -1,153 +1,88 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cámara Viajera</title>
 
-    <!-- ESTILOS INTEGRADOS -->
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #111;
-        }
-
-        .navbar {
+            padding: 0;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
+            font-family: "Helvetica Neue", Arial, sans-serif;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
             align-items: center;
-            padding: 20px;
-            font-size: 18px;
         }
 
-        .nav-links a {
-            margin-left: 20px;
-            text-decoration: none;
-            color: #111;
-        }
-
-        .social-icon svg {
-            vertical-align: middle;
-        }
-
-        .hero {
+        /* TÍTULO PRINCIPAL */
+        h1 {
+            font-size: 4.5rem; /* Más grande */
+            font-weight: 800; /* Más cuerpo */
             text-align: center;
-            padding: 80px 20px;
+            margin-top: 120px;
+            margin-bottom: 40px;
+            background: linear-gradient(90deg, #d4af37, #f7e27c, #d4af37);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: 3px;
         }
 
-        .enter-button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 12px 28px;
-            background: #111;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 4px;
-        }
-
-        section {
-            padding: 60px 20px;
-            text-align: center;
-        }
-
-        footer {
+        /* CONTENEDOR PRINCIPAL */
+        .contenido {
+            max-width: 900px;
             text-align: center;
             padding: 20px;
+            font-size: 1.2rem;
+            line-height: 1.7;
+        }
+
+        /* BOTÓN ENTRAR */
+        .btn-entrar {
             margin-top: 40px;
-            font-size: 14px;
-            color: #555;
-        }
-
-        /* BANNER DESLIZANTE */
-        .banner-slider {
-            width: 100%;
-            overflow: hidden;
-            white-space: nowrap;
-            margin: 40px 0;
-        }
-
-        .banner-track {
-            display: flex;
-            gap: 20px;
-            animation: scrollBanner 30s linear infinite;
-        }
-
-        .banner-track img {
-            height: 180px;
-            object-fit: cover;
+            padding: 14px 32px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #000;
+            background-color: #d4af37;
+            border: none;
             border-radius: 6px;
-            flex-shrink: 0;
+            cursor: pointer;
+            transition: 0.3s ease;
+            text-decoration: none;
         }
 
-        @keyframes scrollBanner {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .btn-entrar:hover {
+            background-color: #f1d97c;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 80px;
+            padding: 20px;
+            font-size: 0.9rem;
+            opacity: 0.6;
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <nav class="navbar">
-            <div class="logo">Cámara Viajera</div>
+    <h1>Cámara Viajera</h1>
 
-            <div class="nav-links">
-                <a href="#portfolio">Portfolio</a>
-                <a href="#sobre-mi">Sobre mí</a>
-                <a href="#contacto">Contacto</a>
+    <div class="contenido">
+        <p>
+            Un espacio donde la imagen se convierte en viaje, memoria y emoción.  
+            Historias capturadas a través de una lente que nunca deja de moverse.
+        </p>
 
-                <!-- Icono YouTube -->
-                <a href="https://www.youtube.com/@camaraviajera-MGM/videos" target="_blank" class="social-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M23.5 6.2s-.2-1.7-.8-2.4c-.8-.9-1.6-.9-2-1C17.3 2.5 12 2.5 12 2.5h-.1s-5.3 0-8.7.3c-.4.1-1.2.1-2 1C.7 4.5.5 6.2.5 6.2S0 8.1 0 10v1.9c0 1.9.5 3.8.5 3.8s.2 1.7.8 2.4c.8.9 1.9.9 2.4 1 1.8.2 7.6.3 7.6.3s5.3 0 8.7-.3c.4-.1 1.2-.1 2-1 .6-.7.8-2.4.8-2.4s.5-1.9.5-3.8V10c0-1.9-.5-3.8-.5-3.8zM9.7 14.6V8.4l6.2 3.1-6.2 3.1z"/>
-                    </svg>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Banner deslizante -->
-    <section class="banner-slider">
-        <div class="banner-track">
-            <!-- Sustituye estos nombres por tus fotos reales -->
-            <img src="foto1.jpg" alt="">
-            <img src="foto2.jpg" alt="">
-            <img src="foto3.jpg" alt="">
-            <img src="foto4.jpg" alt="">
-            <img src="foto5.jpg" alt="">
-        </div>
-    </section>
-
-    <section class="hero">
-        <h1>Un viaje a través de la luz</h1>
-        <p>Fotografía, emoción y movimiento en cada destino.</p>
-
-        <!-- Botón Entrar -->
-        <a href="https://www.youtube.com/@camaraviajera-MGM/videos" target="_blank" class="enter-button">
-            Entrar
-        </a>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2>Portfolio</h2>
-        <p>Una selección de momentos capturados alrededor del mundo.</p>
-    </section>
-
-    <section id="sobre-mi" class="sobre-mi">
-        <h2>Sobre mí</h2>
-        <p>Detrás de la cámara, un viajero que busca historias en cada rincón.</p>
-    </section>
-
-    <section id="contacto" class="contacto">
-        <h2>Contacto</h2>
-        <p>Puedes escribirme para colaboraciones, proyectos o simplemente para saludar.</p>
-    </section>
+        <a href="galeria.html" class="btn-entrar">Entrar</a>
+    </div>
 
     <footer>
-        <p>© 2024 Cámara Viajera — Creando historias a través de la luz</p>
+        © 2026 Cámara Viajera — Todos los derechos reservados
     </footer>
 
 </body>
