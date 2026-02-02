@@ -17,17 +17,25 @@
             align-items: center;
         }
 
-        /* TÍTULO PRINCIPAL */
+        /* TÍTULO PRINCIPAL METÁLICO */
         h1 {
-            font-size: 4.5rem; /* Más grande */
-            font-weight: 800; /* Más cuerpo */
+            font-size: 5rem;
+            font-weight: 900;
             text-align: center;
             margin-top: 120px;
             margin-bottom: 40px;
-            background: linear-gradient(90deg, #d4af37, #f7e27c, #d4af37);
+            background: linear-gradient(135deg, #b8860b, #ffd700, #fff8dc, #ffd700, #b8860b);
+            background-size: 300% 300%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            letter-spacing: 3px;
+            animation: shine 6s ease-in-out infinite;
+            letter-spacing: 4px;
+        }
+
+        @keyframes shine {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         /* CONTENEDOR PRINCIPAL */
@@ -39,23 +47,35 @@
             line-height: 1.7;
         }
 
-        /* BOTÓN ENTRAR */
-        .btn-entrar {
+        /* BOTÓN ESTILO YOUTUBE */
+        .btn-youtube {
             margin-top: 40px;
             padding: 14px 32px;
             font-size: 1.1rem;
             font-weight: 600;
-            color: #000;
-            background-color: #d4af37;
+            color: #fff;
+            background-color: #ff0000; /* Rojo YouTube */
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
             transition: 0.3s ease;
             text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
         }
 
-        .btn-entrar:hover {
-            background-color: #f1d97c;
+        .btn-youtube:hover {
+            background-color: #cc0000;
+        }
+
+        /* ICONO PLAY */
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 14px solid white;
+            border-top: 9px solid transparent;
+            border-bottom: 9px solid transparent;
         }
 
         /* FOOTER */
@@ -78,7 +98,10 @@
             Historias capturadas a través de una lente que nunca deja de moverse.
         </p>
 
-        <a href="galeria.html" class="btn-entrar">Entrar</a>
+        <a href="https://www.youtube.com/@camaraviajera-MGM/videos" class="btn-youtube">
+            <div class="play-icon"></div>
+            Entrar
+        </a>
     </div>
 
     <footer>
