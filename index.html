@@ -6,143 +6,59 @@
     <title>Cámara Viajera</title>
 
     <style>
-        /* --- ESTILOS GENERALES --- */
         body {
             margin: 0;
             padding: 0;
-            background-color: #000;
-            color: #fff;
+            background-color: #0a0a0a;
+            color: #f2f2f2;
             font-family: "Helvetica Neue", Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            animation: fadeIn 1.8s ease;
-            background-image: radial-gradient(rgba(255,255,255,0.04) 1px, transparent 1px);
-            background-size: 3px 3px;
+            text-align: center;
         }
 
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* --- TÍTULO PRINCIPAL --- */
         h1 {
-            font-size: 5rem;
-            font-weight: 900;
-            text-align: center;
-            margin-top: 120px;
-            margin-bottom: 10px;
-
-            background: linear-gradient(135deg, #8a6f1a, #d4af37, #fff8d0, #d4af37, #8a6f1a);
-            background-size: 300% 300%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shine 6s ease-in-out infinite;
-
-            text-shadow:
-                0 0 12px rgba(255, 215, 0, 0.4),
-                0 0 22px rgba(255, 215, 0, 0.25);
-
-            filter: drop-shadow(2px 2px 3px rgba(0,0,0,0.8));
-            letter-spacing: 4px;
-        }
-
-        @keyframes shine {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* --- SUBTÍTULO --- */
-        h2 {
-            font-size: 1.4rem;
             font-weight: 300;
-            margin-top: 0;
-            margin-bottom: 40px;
-            opacity: 0.85;
-            letter-spacing: 1px;
+            font-size: 2.8rem;
+            margin-top: 40px;
+            letter-spacing: 2px;
         }
 
-        /* --- CARRUSEL AUTOMÁTICO --- */
-        .carousel-container {
-            width: 90%;
-            max-width: 1000px;
+        /* CARRUSEL */
+        .slider {
+            height: 220px;
             overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 50px;
-        }
-
-        .carousel-track {
-            display: flex;
-            width: 400%;
-            animation: slide 16s infinite linear;
-        }
-
-        .carousel-track img {
+            position: relative;
             width: 100%;
-            height: 350px;
+            margin: 40px auto;
+        }
+
+        .slide-track {
+            display: flex;
+            width: calc(260px * 16);
+            animation: scroll 45s linear infinite;
+        }
+
+        .slide {
+            height: 220px;
+            width: 260px;
+            flex-shrink: 0;
+            margin-right: 12px;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
-            filter: brightness(0.85);
-        }
-
-        @keyframes slide {
-            0%   { transform: translateX(0%); }
-            25%  { transform: translateX(-100%); }
-            50%  { transform: translateX(-200%); }
-            75%  { transform: translateX(-300%); }
-            100% { transform: translateX(0%); }
-        }
-
-        /* --- CONTENIDO --- */
-        .contenido {
-            max-width: 900px;
-            text-align: center;
-            padding: 20px;
-            font-size: 1.2rem;
-            line-height: 1.7;
-        }
-
-        /* --- BOTÓN YOUTUBE FIJO --- */
-        .btn-youtube {
-            position: fixed;
-            bottom: 25px;
-            right: 25px;
-
-            padding: 10px 20px;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #fff;
-            background-color: #ff0000;
-            border: none;
             border-radius: 6px;
-            cursor: pointer;
-            transition: 0.3s ease;
-            text-decoration: none;
-
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-
-            box-shadow: 0 0 12px rgba(255,0,0,0.4);
         }
 
-        .btn-youtube:hover {
-            background-color: #cc0000;
-            transform: scale(1.05);
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-260px * 8)); }
         }
 
-        .play-icon {
-            width: 0;
-            height: 0;
-            border-left: 12px solid white;
-            border-top: 7px solid transparent;
-            border-bottom: 7px solid transparent;
-        }
-
-        /* --- FOOTER --- */
+        /* FOOTER */
         footer {
-            margin-top: 80px;
+            margin-top: 60px;
             padding: 20px;
             font-size: 0.9rem;
             opacity: 0.6;
@@ -153,33 +69,33 @@
 <body>
 
     <h1>Cámara Viajera</h1>
-    <h2>Luz, viaje y memoria</h2>
 
-    <!-- CARRUSEL AUTOMÁTICO -->
-    <div class="carousel-container">
-        <div class="carousel-track">
-            <img src="foto1.jpg" alt="Imagen 1">
-            <img src="foto2.jpg" alt="Imagen 2">
-            <img src="foto3.jpg" alt="Imagen 3">
-            <img src="foto4.jpg" alt="Imagen 4">
+    <!-- CARRUSEL -->
+    <div class="slider">
+        <div class="slide-track">
+
+            <div class="slide"><img src="imagenes/01.jpg" alt="Templo de Debod" /></div>
+            <div class="slide"><img src="imagenes/02.jpg" alt="Atardecer dramático" /></div>
+            <div class="slide"><img src="imagenes/03.jpg" alt="Bosque monumental" /></div>
+            <div class="slide"><img src="imagenes/04.jpg" alt="Parque urbano" /></div>
+            <div class="slide"><img src="imagenes/05.jpg" alt="Edificio histórico" /></div>
+            <div class="slide"><img src="imagenes/06.jpg" alt="Fachadas coloridas" /></div>
+            <div class="slide"><img src="imagenes/07.jpg" alt="Escalera en espiral arriba" /></div>
+            <div class="slide"><img src="imagenes/08.jpg" alt="Escalera en espiral abajo" /></div>
+            <div class="slide"><img src="imagenes/09.jpg" alt="Mirador costero" /></div>
+            <div class="slide"><img src="imagenes/10.jpg" alt="Cabaña en lago" /></div>
+            <div class="slide"><img src="imagenes/11.jpg" alt="The Temple Bar" /></div>
+            <div class="slide"><img src="imagenes/12.jpg" alt="Pueblo medieval" /></div>
+            <div class="slide"><img src="imagenes/13.jpg" alt="Casa inglesa" /></div>
+            <div class="slide"><img src="imagenes/14.jpg" alt="Café Bruxelles" /></div>
+            <div class="slide"><img src="imagenes/15.jpg" alt="Puente medieval" /></div>
+            <div class="slide"><img src="imagenes/16.jpg" alt="Castillo de Frías" /></div>
+
         </div>
     </div>
 
-    <div class="contenido">
-        <p>
-            Un espacio donde la imagen se convierte en viaje, memoria y emoción.  
-            Historias capturadas a través de una lente que nunca deja de moverse.
-        </p>
-    </div>
-
-    <!-- BOTÓN YOUTUBE FIJO -->
-    <a href="https://www.youtube.com/@camaraviajera-MGM/videos" class="btn-youtube">
-        <div class="play-icon"></div>
-        YouTube
-    </a>
-
     <footer>
-        © 2026 Cámara Viajera — Todos los derechos reservados
+        © Cámara Viajera — Explorando el mundo a través de la luz
     </footer>
 
 </body>
